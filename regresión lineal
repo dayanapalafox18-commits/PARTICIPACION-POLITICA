@@ -1,0 +1,2 @@
+m1 <- lm(Participacion_politica ~ Actividad_politica + Interes_politico + Confianza_gobierno, data = datos)
+summary(m1)
