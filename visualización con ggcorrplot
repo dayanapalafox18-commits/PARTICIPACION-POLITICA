@@ -1,0 +1,2 @@
+gcorrplot(corr_parti, type = "lower", lab = TRUE, show.legend = TRUE) +
+  ggtitle("Matriz de correlación (participación política y confianza en el gobierno)") + theme_minimal()
