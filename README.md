@@ -32,4 +32,15 @@ Además, se agregó una segunda versión del gráfico con mejoras visuales como 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
  
