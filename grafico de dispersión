@@ -1,0 +1,9 @@
+grafica <- ggplot(datos, aes(x=Confianza_gobierno, y=Participacion_politica)) +
+  geom_point() + geom_smooth(method = lm) +
+  scale_x_log10() +
+  labs(title = "relación entre participación politica y confianza en el gobierno",
+       subtitle = paste("grafico de disperción=",round(cor(datos$Participacion_politica, datos$Confianza_gobierno), 2)),
+       x = "Confianza_gobierno", 
+       y = "Participacion_politica",
+       caption = "Fuente: Elaboración propia") +
+  theme_minimal()
