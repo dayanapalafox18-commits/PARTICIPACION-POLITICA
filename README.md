@@ -78,7 +78,8 @@ Matriz de correlación
 
 <img width="865" height="550" alt="image" src="https://github.com/user-attachments/assets/d4584d99-6330-4cdd-a7ab-0429fdebbb93" />
 
-Esta grafica os permite ver que tato interes tienen las personas e la política y que tanto ejercen actividades que muestren que tanta participación y interes tienen sobre la política y su confianza hacia sus gobernantes.
+La matriz de correlación muestra relaciones positivas entre las variables analizadas. La asociación más alta se observa entre actividad política e interés político (r = 0.83), lo que indica que a mayor interés en la política, mayor participación en actividades políticas. También existe una relación moderada entre participación política y actividad política (r = 0.68), así como entre participación política e interés político (r = 0.64). En contraste, la confianza en el gobierno presenta correlaciones bajas con las demás variables, lo que sugiere una relación débil con la participación y el interés político.
+
 
 
 
