@@ -1,35 +1,104 @@
-<img width="860" height="294" alt="salud i" src="https://github.com/user-attachments/assets/2828cde6-98e3-4d19-b957-9ed8935ead4e" />
-Esta gráfica de barras muestra el número de pacientes atendidos en diferentes servicios de salud. Cada barra representa un servicio específico y su altura indica la cantidad de pacientes atendidos.
 
-Este tipo de gráfico permite comparar de forma clara la demanda entre los distintos servicios médicos.
+participació política
 
-“Se observa que el servicio de Consultas es el más utilizado, mientras que Urgencias y Laboratorio presentan menor número de pacientes
+El objetivo de este trabajo es analizar el nivel de participación política que tienen las personas.
+
+Código que usé para generar el trabajo
+Primero cargué las librerías necesarias
+
+library(dplyr)
+
+library(ggplot2)
+
+library(ggcorrplot)
+
+Datos para la data.frame
+datos <- data.frame(
+
+Participacion_politica = c(8,5,5,4,2,9,4,8,3,5,1,8,5,1,4,2,5,6,8,3,4,7,3),
+
+Actividad_politica = c(10,8,7,1,3,10,6,8,1,5,1,6,7,6,7,3,10,5,7,4,5,7,5),
+
+Interes_politico = c(10,5,8,1,3,10,3,5,1,5,1,8,8,6,3,4,10,5,8,6,6,7,6),
+
+Confianza_gobierno = c(7,5,4,3,1,6,1,1,5,1,2,9,4,2,4,9,9,8,1,7,1,6,2)
+
+)
+
+Limpieza de datos
+corr_parti <- cor(datos, use = "pairwise.complete.obs") %>% round(2)
+
+
+  Ver datos limpios
+glimpse(corr_parti)
+
+Matriz de correlación
+----------------------------------------------------------
+Calculamos correlación de Pearson
+
+cor(datos$Participacion_politica, datos$Confianza_gobierno, method = "pearson")
+
+
+Visualización con ggcorrplot
+
+ggcorrplot(corr_parti, type = "lower", lab = TRUE, show.legend = TRUE) +
+  ggtitle("Matriz de correlación (participación política y confianza en el gobierno)") + theme_minimal()
+
+
+Gráfico de dispersión
+
+grafica <- ggplot(datos, aes(x=Confianza_gobierno, y=Participacion_politica)) +
+  geom_point() + geom_smooth(method = lm) +
+  scale_x_log10() +
+  labs(title = "relación entre participación politica y confianza en el gobierno",
+       subtitle = paste("grafico de disperción=",round(cor(datos$Participacion_politica, datos$Confianza_gobierno), 
+
+rafica
+
+m1 <- lm(Participacion_politica ~ Actividad_politica + Interes_politico + Confianza_gobierno, data = datos)
+summary(m1)
+       
+Regresion lineal
+ x = "Confianza_gobierno", 
+       y = "Participacion_politica",
+       caption = "Fuente: Elaboración propia") +
+  theme_minimal()
+
+  
+
+Modelo
+summary(modelo)
+
+
+Resultados del código
+
+
+Matriz de correlación
+
+
+<img width="865" height="550" alt="image" src="https://github.com/user-attachments/assets/d4584d99-6330-4cdd-a7ab-0429fdebbb93" />
+
+Esta grafica os permite ver que tato interes tienen las personas e la política y que tanto ejercen actividades que muestren que tanta participación y interes tienen sobre la política y su confianza hacia sus gobernantes.
 
 
 
-<img width="594" height="239" alt="day ahorita grafica" src="https://github.com/user-attachments/assets/2673b049-2475-4331-9733-84af3a1d1b11" />
+
+Gráfica del comportamiento de la variable dependiente 
+
+
+<img width="865" height="550" alt="image" src="https://github.com/user-attachments/assets/fbe90e51-0ba2-4157-a95f-a101fa7555fb" />
+
+La gráfica nos muesta que existe una relación débil negativa e cuanto al interes politico 
 
 
 
-Esta gráfica muestra la evolución de la percepción de seguridad entre los años 2020 y 2025. Se utilizó un gráfico de línea porque permite observar claramente los cambios y la tendencia a lo largo del tiempo.
+Regresión lineal
 
-En el eje horizontal se representan los años y en el eje vertical el porcentaje de percepción de seguridad.
-
-Se observa una disminución entre 2020 y 2022, seguida de una recuperación constante a partir de 2023, alcanzando su punto más alto en 2025.
-
-Además, se agregó una segunda versión del gráfico con mejoras visuales como colores, puntos más visibles y etiquetas para facilitar la interpretación de los datos
+<img width="753" height="304" alt="image" src="https://github.com/user-attachments/assets/e8a33279-f725-439c-be59-cd1743ec7872" />
 
 
 
-
-
-
-
-
-
-
-
-
+aqui se  muestra que  no se encontró evidencia estadística que respalde que las variables analizadas predigan significativamente en cuanto al interes politico derevado de las actividades en el que las personas participan en actividades políticas 
 
 
 
