@@ -1,3 +1,0 @@
-cor(datos$Participacion_politica, datos$Confianza_gobierno, method = "pearson")
-
-corr_parti <- cor(datos, use = "pairwise.complete.obs") %>% round(2)
